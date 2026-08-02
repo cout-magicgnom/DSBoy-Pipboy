@@ -1,0 +1,19 @@
+display superior:
+	|-est
+	  |-special
+	  |-vantagens
+	|-inv, 
+	  |-armas
+	  |-vestes
+	  |-ajuda
+	|-dados, 
+	  |-missões
+	  |-oficina
+	|-mapa 
+	  |-mapa local
+	|-radio
+	  |-gif de osciloscopio
+---------------------------
+display inferior:
+	|-est
+	  |-status
