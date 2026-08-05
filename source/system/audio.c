@@ -1,12 +1,12 @@
 #define MINIAUDIO_IMPLEMENTATION
 #include "../headers/miniaudio.h"
-
 #include <stdio.h>
-
 #include "../headers/audio.h"
 #include "../headers/estados.h"
-
 #define TOTAL_MUSICAS 5
+
+static ma_engine engine;
+static ma_sound backgroundSound;
 
 typedef struct{
     const char *titulo;
@@ -15,10 +15,10 @@ typedef struct{
 
 static ma_engine engine;
 
-/* Catálogo fixo de músicas */
+//Catálogo fixo de músicas
 static Musica radioPlaylist[TOTAL_MUSICAS] = {
-    {"Mr. New Vegas", "../assets/sounds/radio/Mr-New-Vegas-Radio.mp3"},
-    {"Big Iron",      "assets/sounds/radio/Big-Iron.mp3"},
+    {"Mr. New Vegas", "assets/sounds/pipboy/radiation/c/ui_pipboy_radiation_c_03.wav"},
+    {"Big Iron",      "../assets/sounds/radio/Big-Iron.mp3"},
     {"Blue Moon",     "assets/sounds/radio/Blue-Moon.mp3"},
     {"Johnny Guitar", "assets/sounds/radio/Johnny-Guitar.mp3"},
     {"Heartaches",    "assets/sounds/radio/Heartaches.mp3"}
@@ -26,6 +26,20 @@ static Musica radioPlaylist[TOTAL_MUSICAS] = {
 
 int audioInit(){
     return ma_engine_init(NULL, &engine);
+}
+
+void playBackground(const char *arquivo){
+    ma_sound_init_from_file(
+        &engine,
+        arquivo,
+        0,
+        NULL,
+        NULL,
+        &backgroundSound);
+
+    ma_sound_set_looping(&backgroundSound, MA_TRUE);
+
+    ma_sound_start(&backgroundSound);
 }
 
 void audioClose(){
@@ -37,16 +51,21 @@ void playAudio(const char *arquivo){
 }
 
 void listar_radio(){
-
-    printf("\n=========================\n");
-    printf("       PIP-BOY RADIO\n");
-    printf("=========================\n");
+        
+    printf(" ==========================\n ");
+    printf(" - PIPBOY OS - 1000A \n");
+    printf(" ========================== \n");
+    printf(" STATS  ");
+    printf(" INV  ");
+    printf(" DADOS  ");
+    printf(" MAPA  ");
+    printf(" *RADIO*\n");
 
     for(int i = 0; i < TOTAL_MUSICAS; i++){
         printf("%d - %s\n", i + 1, radioPlaylist[i].titulo);
     }
 
-    printf("0 - Voltar");
+    printf("0 - Voltar\n");
 }
 
 Estado radio(){

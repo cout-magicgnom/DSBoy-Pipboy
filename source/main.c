@@ -10,9 +10,8 @@
 /*
 TODO geral:
 1. criar REMOVER itens 
-2. separar as abas em arquivos (X)
-3. comecar o radio 
-4. comecar dados e stats
+2. comecar o radio 
+3. comecar dados e stats
 - Para compilar: 
 gcc main.c system/inventario.c system/audio.c -o main
 - Compilar dentro de src/
@@ -80,26 +79,32 @@ Estado printMenu(){
         switch (opcao()){
 
         case 1:
+            playAudio("../assets/sounds/pipboy/ui_pipboy_mode.wav");
             return STATUS;
             break;
-        
-        case 2:
+            
+            case 2:
+            playAudio("../assets/sounds/pipboy/ui_pipboy_mode.wav");
             return INVENTARIO;
             break;
-
-        case 3:
+            
+            case 3:
+            playAudio("../assets/sounds/pipboy/ui_pipboy_mode.wav");
             return DADOS;
             break;
-
-        case 4: 
+            
+            case 4: 
+            playAudio("../assets/sounds/pipboy/ui_pipboy_mode.wav");
             return MAPA;
             break;
-
-        case 5:
+            
+            case 5:
+            playAudio("../assets/sounds/pipboy/ui_pipboy_mode.wav");
             return RADIO;
             break;
-
-        case 0:
+            
+            case 0:
+            playAudio("../assets/sounds/pipboy/ui_pipboy_mode.wav");
             return DESLIGAR;
         }
     }
@@ -112,14 +117,22 @@ Estado printMenu(){
 =============================================================
 */
 
-int main() {
+int main(){
+
     audioInit();
+    /*
+    while(1){
+        playBackground("../assets/sounds/pipboy/ui_pipboy_hum_lp.wav");
+    }
+    */
+
     EstadoInventario estadoInventario = LISTAR;
     Estado estadoAtual = MENU;
     
     while (estadoAtual != DESLIGAR){
         switch (estadoAtual){
             case MENU:
+                printf("chegou no audio");
                 estadoAtual = printMenu();
                 break;
 
@@ -136,7 +149,7 @@ int main() {
                 break;
         }
     }
-
+    audioClose();
     printf("\n\nEncerrando . . .\n\n");
     return 0;
 }

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "../headers/inventario.h"
+#include "../headers/estados.h"
+#include "../headers/audio.h"
 
-
-#define MAX_ITENS 100
-
+#define MAX_ITEMS 100
 
 /*
 =============================================================
@@ -40,7 +40,7 @@ int totalCatalogo = sizeof(catalogo) / sizeof(catalogo[0]);
 
 // ---------------- INVENTÁRIO ----------------
 
-SlotInventario inventario[MAX_ITENS];
+SlotInventario inventario[MAX_ITEMS];
 int totalInventario = 0;
 
 // ---------------- FUNÇÕES ----------------
@@ -166,7 +166,7 @@ void removerItem(){
     return;
 }
 
-Estado telaInventario(void){
+Estado telaInventario(){
     EstadoInventario estado = LISTAR;
 
     while (1) {
