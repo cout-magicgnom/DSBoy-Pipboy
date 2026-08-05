@@ -13,6 +13,16 @@ TODO geral:
 2. separar as abas em arquivos (X)
 3. comecar o radio 
 4. comecar dados e stats
+
+layout: 
+    ____________
+    |           |
+    |telaInv()  |
+    |           |
+    |===========|
+    |while(1)   |
+    |printMenu()|
+    |___________|
 - Para compilar: 
 gcc main.c system/inventario.c system/audio.c -o main
 - Compilar dentro de src/
@@ -65,6 +75,7 @@ MENU INICIAL
 =============================================================
 */
 Estado printMenu(){
+    //talvez reclame do audioInit(); antes
     
     while(1){
         
@@ -76,26 +87,31 @@ Estado printMenu(){
         printf(" DADOS  ");
         printf(" MAPA  ");
         printf(" RADIO\n");
-
+        
         switch (opcao()){
-
+            
         case 1:
+            playAudio("assets/sounds/pipboy/ui_pipboy_mode.wav");
             return STATUS;
             break;
-        
+            
         case 2:
+            playAudio("assets/sounds/pipboy/ui_pipboy_mode.wav");
             return INVENTARIO;
             break;
-
+            
         case 3:
+            playAudio("assets/sounds/pipboy/ui_pipboy_mode.wav");
             return DADOS;
             break;
-
+            
         case 4: 
+            playAudio("assets/sounds/pipboy/ui_pipboy_mode.wav");
             return MAPA;
             break;
-
+            
         case 5:
+            playAudio("assets/sounds/pipboy/ui_pipboy_mode.wav");
             return RADIO;
             break;
 

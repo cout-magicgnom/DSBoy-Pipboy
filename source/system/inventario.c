@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include "../headers/inventario.h"
-
+#include "../headers/estados.h"
 
 #define MAX_ITENS 100
-
 
 /*
 =============================================================
                         INVENTARIO
 =============================================================
-    catalogo
 */
 
 Estado mostrarInventario();

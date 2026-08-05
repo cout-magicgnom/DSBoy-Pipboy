@@ -1,10 +1,8 @@
 #define MINIAUDIO_IMPLEMENTATION
 #include "../headers/miniaudio.h"
-
-#include <stdio.h>
-
-#include "../headers/audio.h"
 #include "../headers/estados.h"
+#include "../headers/audio.h"
+#include <stdio.h>
 
 #define TOTAL_MUSICAS 5
 
