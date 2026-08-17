@@ -8,13 +8,23 @@
 #include "headers/estados.h"
 
 /*
-TODO geral:
+TODO :
 1. adicionar REMOVER itens
 2. terminar background theme  
 3. comecar dados e stats
 4. mudar a selecao atual de opcoes para getch()
 5. adicionar verbose para inicialização e desligamento
 6. adicionar manipulador de audio
+
+layout: 
+    ____________
+    |           |
+    |telaInv()  |
+    |           |
+    |===========|
+    |while(1)   |
+    |printMenu()|
+    |___________|
 
 - Para compilar: 
 gcc main.c system/inventario.c system/audio.c -o main
@@ -68,6 +78,7 @@ MENU INICIAL
 =============================================================
 */
 Estado printMenu(){
+    //talvez reclame do audioInit(); antes
     
     while(1){
         
@@ -79,10 +90,10 @@ Estado printMenu(){
         printf(" DADOS  ");
         printf(" MAPA  ");
         printf(" RADIO\n");
-
+        
         switch (opcao()){
-
-        case 1:
+            
+            case 1:
             playAudio("../assets/sounds/pipboy/ui_pipboy_mode.wav");
             return STATUS;
             break;

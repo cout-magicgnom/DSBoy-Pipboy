@@ -3,6 +3,7 @@
 #define MAX_ITEMS 100
 #include "estados.h"
 
-Estado telaInventario();
+Estado telaInventario(void);
+
 
 #endif
