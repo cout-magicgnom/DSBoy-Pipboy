@@ -9,12 +9,16 @@
 
 /*
 TODO geral:
-1. criar REMOVER itens 
-2. comecar o radio 
+1. adicionar REMOVER itens
+2. terminar background theme  
 3. comecar dados e stats
+4. mudar a selecao atual de opcoes para getch()
+5. adicionar verbose para inicialização e desligamento
+6. adicionar manipulador de audio
+
 - Para compilar: 
 gcc main.c system/inventario.c system/audio.c -o main
-- Compilar dentro de src/
+
 */
 
 Estado stats(){
@@ -132,7 +136,6 @@ int main(){
     while (estadoAtual != DESLIGAR){
         switch (estadoAtual){
             case MENU:
-                printf("chegou no audio");
                 estadoAtual = printMenu();
                 break;
 
