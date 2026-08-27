@@ -28,9 +28,8 @@ DSBoy-Pipboy/
 
 ## Requirements
 
-- Raspberry Pi (or another compatible single-board computer)
-- [List any specific OS, Python version, or libraries your project depends on]
-- [List any hardware components, e.g. display, buttons, enclosure]
+- Nintendo DSi/Raspberry Pi 2B+ (or another compatible single-board computer)
+- 
 
 ## 💾 Installation
 
@@ -46,7 +45,7 @@ cd source
 
 ```
 
-## Usage
+## 🖋️ Usage
 
 To use the initial (terminal) version, simply use the numeric keys on the keyboard to navigate through the state machine. The next versions will update the navigation mechanism using the keyboard arrows.
 ```
@@ -78,14 +77,14 @@ Escolha:
 - [ ] Document supported hardware (displays, buttons, enclosures)
 - [ ] Add contribution guidelines -->
 
-## Contributing
+## 👷‍♀️ Contributing
 
 Contributions, issues and feature requests are welcome! Feel free to check the [issues page](https://github.com/cout-magicgnom/DSBoy-Pipboy/issues) or open a pull request.
 
-## License
+## 🏛️ License
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 This is a fan-made, non-commercial project inspired by the Pip-Boy from the *Fallout* franchise. *Fallout* and *Pip-Boy* are trademarks of Bethesda Softworks / ZeniMax Media. This project is not affiliated with, endorsed by, or sponsored by Bethesda.
