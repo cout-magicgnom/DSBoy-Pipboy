@@ -39,17 +39,38 @@ DSBoy-Pipboy/
 git clone https://github.com/cout-magicgnom/DSBoy-Pipboy.git
 cd DSBoy-Pipboy
 
-# Install dependencies
-# (add the exact commands for your stack, e.g. pip install -r requirements.txt)
-
 # Run the project
-# (add the command used to start the interface)
+gcc main.c system/inventario.c system/audio.c -o main
+cd source
+./main
+
 ```
 
 ## Usage
 
-.
+To use the initial (terminal) version, simply use the numeric keys on the keyboard to navigate through the state machine. The next versions will update the navigation mechanism using the keyboard arrows.
+```
+ ==========================
+  - PIPBOY OS - 1000A 
+ ========================== 
+ *STATS*   INV   DADOS   MAPA   RADIO
 
+
+Escolha: 5
+
+ ==========================
+  - PIPBOY OS - 1000A 
+ ========================== 
+ STATS   INV   DADOS   MAPA   *RADIO*
+1 - Mr. New Vegas
+2 - Big Iron
+3 - Blue Moon
+4 - Johnny Guitar
+5 - Heartaches
+0 - Voltar
+
+Escolha:
+```
 <!-- ## Roadmap
 
 - [ ] Add build/wiring instructions
