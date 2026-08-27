@@ -4,11 +4,11 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-## About
+## 📊 About
 
 **DSboy - PipboyOS** aims to bring a functional, real-life recreation of the Pip-Boy from *Fallout* to life using a Raspberry Pi (or compatible single-board computers). The goal is to combine the retro-futuristic aesthetic of the in-game device with real hardware, so you can build and wear your own working Pip-Boy.
 
-## Features
+## 🧮 Features
 
 - Pip-Boy-style graphical interface (Fallout-inspired UI)
 - Designed to run on Raspberry Pi and other compatible systems
@@ -16,7 +16,7 @@
 
 > ℹ️ This section is a starting point — feel free to expand it with the specific tabs/menus (STAT, INV, DATA, MAP, RADIO, etc.) and features your build actually supports.
 
-## Repository structure
+## 🧱 Repository structure
 
 ```
 DSBoy-Pipboy/
@@ -32,7 +32,7 @@ DSBoy-Pipboy/
 - [List any specific OS, Python version, or libraries your project depends on]
 - [List any hardware components, e.g. display, buttons, enclosure]
 
-## Installation
+## 💾 Installation
 
 ```bash
 # Clone the repository
@@ -48,14 +48,14 @@ cd DSBoy-Pipboy
 
 ## Usage
 
-Describe here how to launch the interface, navigate between tabs, and any keyboard/button controls available on the physical build.
+.
 
-## Roadmap
+<!-- ## Roadmap
 
 - [ ] Add build/wiring instructions
 - [ ] Add screenshots or a demo video
 - [ ] Document supported hardware (displays, buttons, enclosures)
-- [ ] Add contribution guidelines
+- [ ] Add contribution guidelines -->
 
 ## Contributing
 
